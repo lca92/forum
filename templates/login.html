@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <body>
-    <h1>Teste</h1>
-    <p>parágrafo</p>
-    <a href="/forum">Botão que leva ao fórum</a>
-  </body>
-</html>
+{% extends "base.html" %} {% block content %}
+
+<form action="/" method="POST">
+  <h1>Login</h1>
+  <p>
+    <label for="user_id">E-mail corporativo:</label>
+    <input type="text" name="user_id" />
+  </p>
+  <p>
+    <label for="password">Senha:</label>
+    <input type="text" name="password" value="" />
+  </p>
+  <a href="/forum/<user_id>">
+    <input type="submit" value="Confirmar" />
+  </a>
+</form>
+
+{% endblock %}
