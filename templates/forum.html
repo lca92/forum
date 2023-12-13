@@ -1,6 +1,10 @@
+<head>
+  <title>Fórum</title>
+</head>
+
 {% extends "base.html" %} {% block content %}
 
 <h1>Olá, {{ user_id | title }}</h1>
-<a href="/">Botão de logout</a>
+<a href="{{ url_for('login') }}">Botão de logout</a>
 
 {% endblock %}
